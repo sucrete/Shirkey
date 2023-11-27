@@ -2,7 +2,7 @@
 
 .header-section {
   @extend %p-rel;
-  box-shadow: 0px 10px 10px 0px rgba($black-color, $alpha: .10);
+  box-shadow: 0px 10px 10px 0px rgba($black-color, $alpha: 0.1);
   z-index: 99;
 
   &.header-fixed {
@@ -11,10 +11,10 @@
     @extend %w-100;
     top: 0;
     left: 0;
-    animation: fadeInDown .5s;
-    -webkit-animation: fadeInDown .5s;
-    -moz-animation: fadeInDown .5s;
-    border-bottom: 1px solid rgba($white-color, $alpha: .10);
+    animation: fadeInDown 0.5s;
+    -webkit-animation: fadeInDown 0.5s;
+    -moz-animation: fadeInDown 0.5s;
+    border-bottom: 1px solid rgba($white-color, $alpha: 0.1);
     z-index: 999;
 
     @include breakpoint(lg) {
@@ -24,7 +24,6 @@
     .header-holder {
       @extend %p-rel;
     }
-
   }
 
   &.header-1 {
@@ -47,8 +46,6 @@
       .list {
         background-color: $body-bg-color;
       }
-
-
     }
 
     .nice-select .option:hover,
@@ -57,7 +54,7 @@
       background-color: darken($body-bg-color, 10);
     }
 
-    .menu>li>a {
+    .menu > li > a {
       color: $white-color;
     }
 
@@ -66,7 +63,6 @@
     }
 
     .header-wrapper .menu-area .ellepsis-bar {
-
       i,
       svg {
         color: $white-color;
@@ -75,12 +71,11 @@
   }
 
   &.header-3 {
-    @extend %p-abs,
-    %w-100;
+    @extend %p-abs, %w-100;
     background-color: transparent;
     top: 0;
 
-    .menu>li>a {
+    .menu > li > a {
       color: $white-color;
     }
 
@@ -93,7 +88,6 @@
     }
 
     .header-wrapper .menu-area .ellepsis-bar {
-
       i,
       svg {
         color: $white-color;
@@ -107,24 +101,21 @@
 }
 
 .lang-select {
-  @extend %flex,
-  %align-i-center;
+  @extend %flex, %align-i-center;
   gap: 5px;
 
   .nice-select {
-    @extend %ps-5,
-    %text-semibold;
+    @extend %ps-5, %text-semibold;
     background-color: transparent;
     border-color: transparent;
   }
 }
 
-
 .header-top {
   @extend %p-rel;
   z-index: 2;
   background-color: $secondary-color;
-  border-bottom: 1px solid rgba($white-color, $alpha: .10);
+  border-bottom: 1px solid rgba($white-color, $alpha: 0.1);
 
   &:first-of-type {
     border-bottom-width: 0px;
@@ -142,7 +133,6 @@
         border-right-color: transparent;
       }
     }
-
   }
 
   @include breakpoint(max-lg) {
@@ -150,15 +140,13 @@
   }
 }
 
-
-
 .header-top-area {
   @extend %flex;
   @extend %justify-center;
   @extend %align-i-center;
 
   @include breakpoint(md) {
-    justify-content: end
+    justify-content: end;
   }
 
   .left {
@@ -172,7 +160,7 @@
 
       @include breakpoint(md) {
         &:not(:last-child) {
-          border-right: 1px solid rgba($white-color, $alpha: .10);
+          border-right: 1px solid rgba($white-color, $alpha: 0.1);
         }
 
         &:nth-of-type(2) {
@@ -215,7 +203,6 @@
         padding: 9px 15px;
       }
     }
-
   }
 
   @include breakpoint(max-lg) {
@@ -224,11 +211,11 @@
       text-align: center;
       justify-content: center;
       margin: 0;
-      border: 1px solid rgba($white-color, $alpha: .10);
+      border: 1px solid rgba($white-color, $alpha: 0.1);
 
       li {
         flex-grow: 1;
-        border-top: 1px solid rgba($white-color, $alpha: .10);
+        border-top: 1px solid rgba($white-color, $alpha: 0.1);
         border-right: none;
 
         &:first-child {
@@ -236,13 +223,12 @@
         }
       }
     }
-
   }
 }
 
 .header-bottom {
   @extend %p-rel;
-  
+
   .logo {
     max-width: 410px;
     a {
@@ -307,20 +293,21 @@
 
     .booking-btn {
       display: none;
+      color: $title-color;
+
+      font-weight: 700;
       @extend %p-rel;
 
       @include breakpoint(md) {
         background-color: $theme-color;
-        border-radius: .25rem;
-        color: $title-color;
+        border-radius: 0.25rem;
         display: inline-block;
-        font-weight: 600;
-        padding: .5rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         text-transform: uppercase;
       }
 
       @include breakpoint(xl) {
-        padding: .75rem 1.5rem;
+        padding: 0.75rem 1.5rem;
       }
 
       span {
@@ -335,20 +322,16 @@
       }
     }
 
-
-
     .search-btn {
-      @extend %d-inline-grid,
-      %place-i-center;
+      @extend %d-inline-grid, %place-i-center;
       @include box(35px);
-      border: 1px solid rgba($theme-color, $alpha: .30);
+      border: 1px solid rgba($theme-color, $alpha: 0.3);
       border-radius: 50%;
 
       @include breakpoint(md) {
         @include box(45px);
       }
     }
-
 
     .ellepsis-bar {
       font-size: 20px;
@@ -361,7 +344,6 @@
       }
     }
 
-
     @include breakpoint(max-sm) {
       padding: 15px 0;
 
@@ -371,7 +353,6 @@
     }
   }
 }
-
 
 //-------------------------Header search css start
 .search-container {
@@ -383,8 +364,7 @@
 }
 
 .search-bar {
-  @extend %p-abs,
-  %p-10;
+  @extend %p-abs, %p-10;
   min-width: 250px;
   top: 100%;
   right: 0;
@@ -394,7 +374,7 @@
   transform: translateY(-10px);
   background-color: $body-bg-color;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 
   @include breakpoint(sm) {
     min-width: 300px;
@@ -403,7 +383,7 @@
 
   button {
     background-color: $theme-color;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     border: none;
     color: $title-color;
     cursor: pointer;
@@ -418,10 +398,7 @@
   transform: translateY(0);
 }
 
-
 //-------------------------Header search css end
-
-
 
 .menu {
   @extend %flex;
@@ -436,8 +413,8 @@
     gap: 15px;
   }
 
-  >li {
-    >a {
+  > li {
+    > a {
       color: $title-color;
       font-size: $fs-base;
       font-weight: 700;
@@ -474,8 +451,8 @@
         transform: translateY(35px);
         opacity: 0;
         visibility: hidden;
-        border: 1px solid rgba($theme-color, $alpha: .30);
-        border-radius: .25rem;
+        border: 1px solid rgba($theme-color, $alpha: 0.3);
+        border-radius: 0.25rem;
 
         li {
           padding: 0;
@@ -489,7 +466,7 @@
             font-size: 15px;
             color: $white-color;
             font-weight: 500;
-            border-bottom: 1px solid rgba($border-color, $alpha: .10);
+            border-bottom: 1px solid rgba($border-color, $alpha: 0.1);
 
             &:hover,
             &.active {
@@ -514,7 +491,7 @@
       }
 
       &:hover {
-        >.submenu {
+        > .submenu {
           -webkit-transform: translateY(15px);
           -ms-transform: translateY(15px);
           transform: translateY(15px);
@@ -568,9 +545,9 @@
     transform-origin: top;
 
     //glassmorphism
-    background: rgba($secondary-color, $alpha: .98);
-    backdrop-filter: blur(20.0px);
-    -webkit-backdrop-filter: blur(20.0px);
+    background: rgba($secondary-color, $alpha: 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     li {
       width: 100%;
@@ -582,11 +559,11 @@
         font-size: 15px;
         font-weight: 700;
         text-transform: capitalize;
-        border-top: 1px solid rgba($white-color, $alpha: .10);
+        border-top: 1px solid rgba($white-color, $alpha: 0.1);
         color: $white-color;
 
         &:hover {
-          background: rgba($theme-color, $alpha: .60);
+          background: rgba($theme-color, $alpha: 0.6);
         }
       }
 
@@ -689,11 +666,10 @@
 }
 
 .menu-item-has-children {
-  >a {
+  > a {
     @extend %p-rel;
 
     &.active {
-
       &::after,
       &::before {
         background-color: currentColor;
@@ -743,13 +719,10 @@
         @include add-prefix(transition, $transition);
       }
     }
-
-
   }
 
   &:hover {
-    >a {
-
+    > a {
       &:before {
         transform: rotate(90deg);
         top: calc(50% - 5px);
@@ -759,8 +732,7 @@
   }
 
   &.open {
-    >a {
-
+    > a {
       &:before {
         transform: rotate(90deg);
         top: calc(50% - 5px);
@@ -795,7 +767,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($color: $white-color, $alpha: .8);
+    background: rgba($color: $white-color, $alpha: 0.8);
 
     .cross {
       position: absolute;
@@ -861,13 +833,13 @@
 
 // page header section start here
 .bg--cover {
-  background-color: rgba($black-color, $alpha: .50);
+  background-color: rgba($black-color, $alpha: 0.5);
   background-blend-mode: overlay;
   background-size: cover;
 
   &.rates {
     background-position: center 60%;
-    background-color: rgba($black-color, $alpha: .30);
+    background-color: rgba($black-color, $alpha: 0.3);
   }
 
   &.course {
@@ -880,16 +852,15 @@
 
   &.book-tee-time {
     background-position: center 80%;
-    background-color: rgba($black-color, $alpha: .20);
+    background-color: rgba($black-color, $alpha: 0.2);
   }
   &.pro-shop {
     background-position: center 80%;
-    background-color: rgba($black-color, $alpha: .15);
+    background-color: rgba($black-color, $alpha: 0.15);
   }
 }
 
 .page-header-section {
-
   &.style-1 {
     background-position: center !important;
     background-size: cover !important;
@@ -907,9 +878,7 @@
     }
 
     .page-header-content {
-
       .page-header-inner {
-
         .page-title {
           h2 {
             @extend %text-regular;
