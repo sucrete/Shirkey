@@ -2759,14 +2759,14 @@ ol {
   background-size: cover;
 }
 .bg--cover.rates {
-  background-position: center 60%;
+  background-position: center 47%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .bg--cover.course {
   background-position: center 68%;
 }
 .bg--cover.contact {
-  background-position: center 60%;
+  background-position: center 50%;
 }
 .bg--cover.book-tee-time {
   background-position: center 80%;
@@ -3004,6 +3004,7 @@ ol {
 }
 .hero--home2 .hero__wrapper {
   padding-block: 115px;
+  background-position: center 70%;
 }
 @media (min-width: 1400px) {
   .hero--home2 .hero__wrapper {

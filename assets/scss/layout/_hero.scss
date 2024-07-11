@@ -131,7 +131,7 @@
     .hero {
       &__wrapper {
         padding-block: 115px;
-
+        background-position: center 70%;
         @include breakpoint(xxl) {
           padding-block: 170px;
         }
